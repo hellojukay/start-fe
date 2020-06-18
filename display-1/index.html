@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            div {
+                background-color: green;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div"></div>
+    </body>
+    <script>
+       "use strict";
+        let flag = 0;
+        let div = document.getElementById("div");
+        setInterval(function(){
+            if(flag) {
+                div.style.display = "none";
+                flag = 0;
+            } else{
+                flag = 1;
+                div.style.display= "block";
+            }
+        }, 500);
+    </script>
+</html>
