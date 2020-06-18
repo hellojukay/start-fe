@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+    </body>
+    <script>
+        let div = document.getElementsByTagName('div')[0];
+        let flag = 1;
+        setInterval(function(){
+            if (flag===1) {
+                div.style.visibility="visiable";
+                flag = 0;
+            }else{
+                div.style.visibility="hidden";
+                flag = 1;
+            }
+            console.info(div.style.visibility);
+            console.info(flag);
+        }, 500);
+    </script>
+</html>
