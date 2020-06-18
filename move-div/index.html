@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            div {
+                background-color: green;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+    <script>
+        let div = document.getElementsByTagName('div')[0];
+        let  d =1;
+        let step = 10;
+        let left = 0;
+        setInterval(function() {
+            if((left <0) || (left+ div.clientWidth>= document.body.clientWidth)){
+                d =d * -1;
+            }
+            left = left + step * d;
+            div.style.position= 'relative';
+            div.style.left = left + 'px';
+        },50)
+    </script>
+</html>
