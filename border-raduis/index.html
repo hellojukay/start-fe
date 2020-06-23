@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            .div1 {
+                border-radius: 50% 0 0 0;
+                background-color:cornflowerblue;
+                height: 100px;
+                width: 100px;
+            }
+            .div2 {
+                border-radius: 0 50% 0 0 ;
+                background-color:cornflowerblue;
+                height: 100px;
+                width: 100px;
+            }
+            .div3 {
+                border-radius: 0 0 50% 0;
+                background-color:cornflowerblue;
+                height: 100px;
+                width: 100px;
+            }
+            .div4 {
+                border-radius: 0 0 0 50%;
+                background-color:cornflowerblue;
+                height: 100px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div  id="div" class="div1"></div>
+    </body>
+    <script>
+        let index = 0;
+        setInterval(function(){
+            if(index > 3) {
+                index = 0
+            }
+            let div = document.getElementById('div');
+            let classes = ['div1','div2','div3','div4'];
+            div.className = classes[index];
+            console.info(classes[index])
+            index++;
+        },100)
+    </script>
+</html>
