@@ -2,18 +2,24 @@
 <html>
     <head>
         <style>
-            div {
-                background-color: green;
-                width: 200px;
-                height: 200px;
+            #div1 {
+                height: 500px;
+                width: 500px;
+                background-color: cadetblue;
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                right: 100px;
+                top: -100px;
+            }
+            #div2 {
+                background-color: black;
+                width: 100px;
+                height: 100px;
             }
         </style>
     </head>
     <body>
-        <div></div>
+        <div id="div1">
+            <div id="div2">hello world</div>
+        </div>
     </body>
 </html>
